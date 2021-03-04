@@ -35,5 +35,4 @@ while guess != the_number and attemp >= 0:
 
 print("You guessed it! The number was", the_number)
 print("Looks like you are a prossional guesser")
-#print("And it only took you", tries, "tries!\n")
 input("\n\nPress the enter key to exit.")
