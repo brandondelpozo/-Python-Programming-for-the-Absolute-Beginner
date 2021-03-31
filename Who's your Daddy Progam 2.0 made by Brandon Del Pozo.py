@@ -12,7 +12,7 @@ set input
 """
 # Code Starts Here
 print("""
-    Welcome to Who's your Daddy Program
+    Welcome to Who's your Daddy Program made by Brandon Del Pozo
 Write a male name to know his father's name.
 """)
 print("""
@@ -53,6 +53,13 @@ while choice != "0":
         if male not in dictionary:
             father = input("Enter a father name for the son: ")
             dictionary[male] = father
+    # look up grand father from grandson's name
+    elif choice == "6":
+        grandson = input("Write the grandson's name to know his grandfather name: ")
+        if grandson in dictionary:
+            father = dictionary[grandson]
+            grandfather = dictionary[father]
+            print(grandson, "grandfather's name is", grandfather)
     else:
         print("Please try adding a valid name")
 
