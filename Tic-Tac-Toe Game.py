@@ -204,7 +204,7 @@ def main():
     display_instruct()
     computer, human = pieces()
     turn = X
-    board = new_broad()
+    board = new_board()
     display_board(board)
 
     while not winner(board):
