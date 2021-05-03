@@ -34,9 +34,6 @@ def display_instruct():
 
         You will make your move known by entering a number. 0 - 8. The number
         will correspond to the board position as illustrated:
-
-        You will make your known by entering a number. 0 - 8. The number
-        will correspond to the board position as illustrated:
         
                         0 | 1 | 2
                         ---------
