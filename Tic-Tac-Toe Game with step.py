@@ -141,7 +141,8 @@ def computer_move(board, computer, human):
     # make a copy to work with since function will be changing list
     board = board[:]
     # the best positions to have, in order
-    BEST_MOVES = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+    #BEST_MOVES = (4, 0, 2, 6, 8, 1, 3, 5, 7)
+    BEST_MOVES = (4, 0, 8, 6, 2, 1, 3, 7, 5)
     
     print("I shall take square number", end=" ")
 
@@ -151,7 +152,7 @@ def computer_move(board, computer, human):
         if winner(board) == computer:
             print(move)
             return move
-        # done checking this move, unde it
+        # done checking this move, undo it
         board[move] = EMPTY
 
     # if human can win, block that move
