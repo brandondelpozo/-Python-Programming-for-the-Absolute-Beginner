@@ -8,21 +8,21 @@ try:
 except:
     print("Something went wrong!")
 
-# specifying exception type
+# Specifying exception type
 try:
     num = float(input("\nEnter a number: "))
 except ValueError:
     print("That was not a number!")
 
 
-# handle multiple exception types
+# Handle multiple exception types
 print()
 for value in (None, "Hi"):
     try:
         print("Attempting to convert", value, "-->", end=" ")
         print(float(value))
 
-# handle multiple exceptions types
+# Handle multiple exceptions types
 print()
 for value in (None, "Hi"):
     try:
@@ -30,7 +30,6 @@ for value in (None, "Hi"):
         print(float(value))
     except (TypeError, ValueError):
         print("Something went wrong!")
-"""
 
 print()
 for value in (None, "Hi"):
@@ -41,13 +40,17 @@ for value in (None, "Hi"):
         print("I can only convert a string or a number!")
     except ValueError:
         print("I can only convert a string of digits!")
-        
+"""
+ 
+# get an exception's argument
+try:
+    num = float(input("\nEnter a number: "))
+except ValueError as e:
+    print("That was not a number! Or as Python would say...")
+    print(e)
+
 input("Press enter key to exit.")
 
-        
-        
-        
-        
         
 
 
