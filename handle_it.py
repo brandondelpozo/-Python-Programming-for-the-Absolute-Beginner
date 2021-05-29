@@ -40,7 +40,6 @@ for value in (None, "Hi"):
         print("I can only convert a string or a number!")
     except ValueError:
         print("I can only convert a string of digits!")
-"""
  
 # get an exception's argument
 try:
@@ -50,9 +49,17 @@ except ValueError as e:
     print(e)
 
 input("Press enter key to exit.")
+"""
 
-        
+# try/except/else
+try:
+    num = float(input("\nEnter a number: "))
+except ValueError:
+    print("That was not a number!")
+else:
+    print("You entered the number", num)
 
+input("\n\nPress the enter key to exit.")
 
 
 
