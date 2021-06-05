@@ -1,4 +1,4 @@
-# Trivia Challenge
+# Trivia Challenge 02
 # Trivia game that reads a plain text file
 
 import sys
