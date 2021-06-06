@@ -38,6 +38,3 @@ print("variety -", s["variety"])
 s.close()
 
 input("\n\nPress the enter key to exit.")
-
-
-

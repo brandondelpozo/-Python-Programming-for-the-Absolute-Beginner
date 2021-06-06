@@ -1,7 +1,8 @@
-# Trivia Challenge 02
+# Trivia Challenge
 # Trivia game that reads a plain text file
 
 import sys
+import pickle, shelve
 
 def open_file(file_name, mode):
     """open a file."""
@@ -59,10 +60,10 @@ def main():
         print(question)
         for i in range(4):
             print("t", i+1, "-", answers[i])
-
+    
         # get answer
         answer = input("What's your answer?: ")
-
+    
         # check answer
         if answer == correct:
             print("\nRight", end=" ")
@@ -71,14 +72,26 @@ def main():
             print("\nWrong.", end=" ")
         print(explanation)
         print("Score:", score, "\n\n")
-
+        
         # get next block
         category, question, answers, correct, explanation, points = next_block(trivia_file)
-
-    trivia_file.close()
-
+    
+    trivia_file.close()  
+            
     print("That was the last question!")
     print("You're final score is", score)
 
+    # saving scores inside .txt
+    print("Pickling score")
+    f = open("listOfScores.dat", "wb")
+    pickle.dump(score, f)
+    f.close()
+
+    print("\nUnpickling score.")
+    f = open("listOfScores.dat", "rb")
+    scores = pickle.load(f)
+    print(scores)
+    f.close()
+    
 main()
 input("\n\nPress the enter key to exit")
