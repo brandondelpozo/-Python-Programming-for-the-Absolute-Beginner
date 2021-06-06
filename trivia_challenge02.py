@@ -36,22 +36,27 @@ def next_block(the_file):
         correct = correct[0]
 
     explanation = next_line(the_file)
-
+    
     points = next_line(the_file)
-
+    
     return category, question, answers, correct, explanation, points
-
+    
 def welcome(title):
     """Welcome the player and get his/her name."""
     print("\t\tWelcome to Trivia Challenge!\n")
-    print("\t\t", title, "\n")
-
+    name = input("what's your name?: ")
+    print("\nWelcome", name,"!")
+    print("\n\t\t", title, "\n")
+    
+    return name
+    
 def main():
     trivia_file = open_file("trivia.txt", "r")
     title = next_line(trivia_file)
-    welcome(title)
+    #welcome(title)
+    name = welcome(title)
     score = 0
-
+    
     # get first block
     category, question, answers, correct, explanation, points = next_block(trivia_file)
     while category:
@@ -80,18 +85,26 @@ def main():
             
     print("That was the last question!")
     print("You're final score is", score)
-
+    
     # saving scores inside .txt
     print("Pickling score")
     f = open("listOfScores.dat", "wb")
     pickle.dump(score, f)
+    pickle.dump(name, f)
     f.close()
-
+    
+    # unpickling score
     print("\nUnpickling score.")
     f = open("listOfScores.dat", "rb")
-    scores = pickle.load(f)
-    print(scores)
+    score = pickle.load(f)
+    name = pickle.load(f)
+    #print(score)
+    #print(name)
+    print("Well done", name, "you got:", score)
     f.close()
+    
+    #print name to test if variable is inside this function
+    #print(name)
     
 main()
 input("\n\nPress the enter key to exit")
