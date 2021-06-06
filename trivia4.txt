@@ -1,0 +1,19 @@
+How much do you know about try and except?
+Give It a Try.
+When do you usually use a 'try' statement?
+When you want to section off some code that could potentially raise an alert.
+When you want to section off some code that could potentially raise an exception.
+When you want to section off some code that could potentially raise a function.
+When you want to section off some code that could potentially raise an class.
+2
+This is a good practice to improve your code quality.
+400
+Except Or Not Except?
+When do you usually use an except statement?
+To handle (or trap) variables with an except clause.
+To handle (or trap) functions with an except clause.
+To handle (or trap) classes with an except clause.
+To handle (or trap) exceptions  with an except clause.
+4
+The 'except' clause is executed only if an exception (from 'try') is raised. 
+600
