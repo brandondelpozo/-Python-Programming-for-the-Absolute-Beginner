@@ -6,8 +6,8 @@ class Critter(object):
     def talk(self):
         print("Hi. I'm an instance of Class Critter.")
 
-    #main
-    crit = Critter()
-    crit.talk()
+#main
+crit = Critter()
+crit.talk()
 
-    input("\n\nPress the enter key to exit.")
+input("\n\nPress the enter key to exit.")
