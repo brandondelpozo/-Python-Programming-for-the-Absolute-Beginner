@@ -41,4 +41,12 @@ class Hand(object):
 # main
 card2 = Card(rank = "2", suit = "c")
 card3 = Card(rank = "3", suit = "c")
-card4 = Card(rank = "4", suit oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo)
+card4 = Card(rank = "4", suit = "c")
+card5 = Card(rank = "5", suit = "c")
+print("\Printing the rest of the objects individually:")
+print(card2)
+print(card3)
+print(card4)
+print(card5)
+
+
