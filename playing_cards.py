@@ -49,4 +49,15 @@ print(card3)
 print(card4)
 print(card5)
 
+my_hand = Hand()
+print("\nPrinting my hand before I add any cards")
+print(my_hand)
+
+my_hand.add(card1)
+my_hand.add(card2)
+my_hand.add(card3)
+my_hand.add(card4)
+my_hand.add(card5)
+print("\nPrinting my hand after adding 5 cards")
+print(my_hand)
 
