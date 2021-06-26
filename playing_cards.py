@@ -61,3 +61,12 @@ my_hand.add(card5)
 print("\nPrinting my hand after adding 5 cards")
 print(my_hand)
 
+your_hand = Hand()
+my_hand.give(card1, your_hand)
+my_hand.give(card2, your_hand)
+print("\nGave the first two cards from my hand to your hand.")
+print("Your hand:")
+print(your_hand)
+print("My hand:")
+print(my_hand)
+
