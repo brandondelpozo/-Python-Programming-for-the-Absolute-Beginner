@@ -39,11 +39,15 @@ class Hand(object):
         other_hand.add(card)
 
 # main
+card1 = Card(rank = "A", suit = "c")
+print("Printing a Card object:")
+print(card1)
+
 card2 = Card(rank = "2", suit = "c")
 card3 = Card(rank = "3", suit = "c")
 card4 = Card(rank = "4", suit = "c")
 card5 = Card(rank = "5", suit = "c")
-print("\Printing the rest of the objects individually:")
+print("n\Printing the rest of the objects individually:")
 print(card2)
 print(card3)
 print(card4)
@@ -70,3 +74,8 @@ print(your_hand)
 print("My hand:")
 print(my_hand)
 
+my_hand.clear()
+print("\nMy hand after clearing it:")
+print(my_hand)
+
+input("\n\nPress the enter key to exit.")
