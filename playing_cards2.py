@@ -40,3 +40,5 @@ class Hand(object):
     def give(self, card, other_hand):
         self.cards.remove(card)
         other_hand.add(card)
+
+Class Deck(Hand):
