@@ -41,22 +41,22 @@ class Hand(object):
         self.cards.remove(card)
         other_hand.add(card)
 
-Class Deck(Hand):
-""" A deck of playing cards"""
-def populate(self):
-    for suit in Card.SUITS:
-        for rank in Card.RANKS:
-            self.add(Card(rank, suit))
+class Deck(Hand):
+    """A deck of playing cards"""
+    def populate(self):
+        for suit in Card.SUITS:
+            for rank in Card.RANKS:
+                self.add(Card(rank, suit))
 
-def shuffle(self):
-    import random
-    random.shuffle(self.cards)
+    def shuffle(self):
+        import random
+        random.shuffle(self.cards)
 
-def deal(self, hands, per_hand = 1):
-    for rounds in range(per_hand):
-        for hand in hand:
-            if self.cards:
-                top_card = self.cards[0]
-                self.give(top_card, hand)
-            else:
-                print("Can't continue deal. Out of cards!")
+    def deal(self, hands, per_hand = 1):
+        for rounds in range(per_hand):
+            for hand in hand:
+                if self.cards:
+                    top_card = self.cards[0]
+                    self.give(top_card, hand)
+                else:
+                    print("Can't continue deal. Out of cards!")
