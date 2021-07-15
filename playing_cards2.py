@@ -60,3 +60,33 @@ class Deck(Hand):
                     self.give(top_card, hand)
                 else:
                     print("Can't continue deal. Out of cards!")
+
+# main
+deck1 = Deck()
+print("Created a new deck.")
+print("Deck:")
+print(deck1)
+
+deck1.shuffle()
+print("\nShuffled the deck.")
+print("Deck:")
+print(deck1)
+
+my_hand = Hand()
+your_hand = Hand()
+hands = [my_hand, your_hand]
+
+deck1.deal(hands, per_hand = 5)
+print("\nDeal 5 cards to my hand and your hand.")
+print("My hand:")
+print(my_hand)
+print("Your hand:")
+print(your_hand)
+print("Deack:")
+print(deck1)
+
+deck1.clear()
+print("\nCleared the deck.")
+
+print("Deck:", deck1)
+input("\n\nPress the enter key to exit.")
