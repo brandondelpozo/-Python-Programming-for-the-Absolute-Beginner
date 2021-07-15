@@ -1,12 +1,9 @@
 # Playing Cards 2.0
 # Demonstrates inheritance - class extension
 
-from typing import ClassVar
-
-
 class Card(object):
     """" A playing card. """
-    RANK = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    RANKS = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     SUITS = ["c", "d", "h", "s"]
 
     def __init__(self, rank, suit):
@@ -54,7 +51,7 @@ class Deck(Hand):
 
     def deal(self, hands, per_hand = 1):
         for rounds in range(per_hand):
-            for hand in hand:
+            for hand in hands:
                 if self.cards:
                     top_card = self.cards[0]
                     self.give(top_card, hand)
@@ -64,6 +61,11 @@ class Deck(Hand):
 # main
 deck1 = Deck()
 print("Created a new deck.")
+print("Deck:")
+print(deck1)
+
+deck1.populate()
+print("\nPopulated to the deck.")
 print("Deck:")
 print(deck1)
 
@@ -82,7 +84,7 @@ print("My hand:")
 print(my_hand)
 print("Your hand:")
 print(your_hand)
-print("Deack:")
+print("Deck:")
 print(deck1)
 
 deck1.clear()
