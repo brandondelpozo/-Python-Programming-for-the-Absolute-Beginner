@@ -15,3 +15,6 @@ class Card(object):
         return rep
 
 class Unprintable_Card(Card):
+    """ A Card that won't reveal its rank or suit when printed"""
+    def __str__(self):
+        return "<unprintable>"
